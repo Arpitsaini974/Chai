@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-espresso: #21130D;
+    --color-dark-coffee: #120C09;
+    --color-cream: #F7F0E5;
+    --color-chai-amber: #E99A3B;
+    --color-burnt-orange: #C96B26;
+  }
+
+  body {
+    background-color: #120C09;
+    color: #F7F0E5;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-brand-title {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-marathi-accent {
+    font-family: 'Rozha One', serif;
+  }
+}
+
+/* Custom Steam Animation */
+@keyframes steamRise {
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.6;
+    transform: translateY(-15px) scaleX(1.1) scaleY(1.2);
+  }
+  50% {
+    transform: translateY(-35px) scaleX(0.9) scaleY(1.4) skewX(2deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-55px) scaleX(1.2) scaleY(1.6) skewX(-3deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-80px) scaleX(1.4) scaleY(1.8);
+    opacity: 0;
+  }
+}
+
+.steam-particle-1 {
+  animation: steamRise 3.5s ease-in-out infinite;
+}
+
+.steam-particle-2 {
+  animation: steamRise 4.2s ease-in-out infinite 0.7s;
+}
+
+.steam-particle-3 {
+  animation: steamRise 3.8s ease-in-out infinite 1.4s;
+}
+
+/* Smooth glass effect */
+.glass-card {
+  background: rgba(33, 19, 13, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(233, 154, 59, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(233, 154, 59, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6), 0 0 20px 0 rgba(233, 154, 59, 0.12);
+}
+
+/* Subtle glow */
+.amber-glow {
+  box-shadow: 0 0 25px rgba(233, 154, 59, 0.25);
+}
+
+.amber-text-gradient {
+  background: linear-gradient(135deg, #F7F0E5 20%, #E99A3B 70%, #C96B26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Accessibility reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
