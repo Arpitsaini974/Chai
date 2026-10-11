@@ -14,8 +14,9 @@ export default function App() {
   const [theme, setTheme] = useState(() => {
     try {
       const savedTheme = localStorage.getItem('upw_chai_theme');
+      // If user specifically picked and saved a theme before, honor it; otherwise default always to 'light'
       if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'light';
     } catch {
       return 'light';
     }
