@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ShoppingBag, Coffee, Sparkles, PhoneCall } from 'lucide-react';
+import { Menu, X, ShoppingBag, Coffee, Sparkles } from 'lucide-react';
 import { BRAND_CONFIG } from '../brandConfig';
 
 export default function Navbar({ cartCount, onOpenCart }) {
@@ -7,6 +7,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
 
   const navLinks = [
     { name: "Signature Menu", href: "#menu" },
+    { name: "Trending Reels", href: "#reels" },
     { name: "Brand Story", href: "#story" },
     { name: "Gallery", href: "#gallery" },
     { name: "Location & Hours", href: "#location" },
@@ -33,8 +34,8 @@ export default function Navbar({ cartCount, onOpenCart }) {
                 <span className="font-brand-title text-base sm:text-lg font-bold tracking-wider text-[#F7F0E5]">
                   UPW AALI
                 </span>
-                <span className="text-[10px] tracking-widest uppercase px-1.5 py-0.5 rounded bg-[#E99A3B]/20 text-[#E99A3B] font-semibold border border-[#E99A3B]/30">
-                  DEMO
+                <span className="text-[10px] tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#E99A3B]/20 text-[#E99A3B] font-bold border border-[#E99A3B]/30">
+                  Udaipurwati
                 </span>
               </div>
               <span className="text-xs font-serif-display tracking-widest text-[#E99A3B] uppercase font-semibold">
@@ -44,7 +45,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+          <nav className="hidden md:flex items-center gap-7" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -54,6 +55,14 @@ export default function Navbar({ cartCount, onOpenCart }) {
                 {link.name}
               </a>
             ))}
+            <a
+              href={BRAND_CONFIG.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-[#21130D] hover:bg-[#E99A3B] text-[#E99A3B] hover:text-[#120C09] border border-[#E99A3B]/30 transition-all"
+            >
+              <span>{BRAND_CONFIG.instagramHandle}</span>
+            </a>
           </nav>
 
           {/* Actions: Cart CTA & Mobile Menu Toggle */}

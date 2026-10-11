@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Sparkles, ShieldCheck, Coffee, CheckCircle2 } from 'lucide-react';
+import { Flame, Sparkles, ShieldCheck, Coffee } from 'lucide-react';
 import { BRAND_CONFIG } from '../brandConfig';
 import ImageWithFallback from './ImageWithFallback';
 
@@ -26,7 +26,7 @@ export default function BrandStory() {
               
               <div className="relative rounded-3xl overflow-hidden border border-[#E99A3B]/30 shadow-2xl bg-[#21130D]">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1200&q=85"
+                  src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=2560&q=95"
                   alt="Clay kulhad filled with steaming amrittulya chai"
                   className="w-full h-80 sm:h-96"
                   fallbackText="Kulhad Tradition"

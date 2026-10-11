@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BRAND_CONFIG } from '../brandConfig';
 import MenuCard from './MenuCard';
-import { Coffee, Filter, Info, ShoppingBag } from 'lucide-react';
+import { Coffee, Info, ShoppingBag } from 'lucide-react';
 
 export default function MenuSection({
   cartItems,
@@ -21,7 +21,7 @@ export default function MenuSection({
   }, [cartItems]);
 
   return (
-    <section id="menu" className="py-20 bg-[#120C09] relative scroll-mt-16">
+    <section id="menu" className="py-20 relative scroll-mt-16">
       {/* Background subtleties */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -68,8 +68,8 @@ export default function MenuSection({
           })}
         </div>
 
-        {/* Menu Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Menu Cards Grid - 2 Column Modern Tiles */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
           {filteredItems.map((item) => {
             const cartItem = cartItems.find((ci) => ci.id === item.id);
             const quantity = cartItem ? cartItem.quantity : 0;

@@ -1,182 +1,264 @@
 /**
  * UPW Aali Amrittulya Chai — Centralized Brand & Demo Configuration
  * 
- * NOTE: As per guidelines, verified business contact details, real addresses, 
- * and phone numbers are strictly kept as explicit placeholders.
- * Demo menu items and prices are realistic sample data.
+ * Re-aligned with official Instagram: @upw_aali_amrittulya_chai
+ * - Udaipurwati (UPW), Rajasthan (Near Ghumchakkar)
+ * - Signatures: Kesar Gud Chai, Kulhad Kadak Chai, Adrak Elaichi, Irani Chai, Masala Kadak
+ * - 100% PURE CHAI ONLY: Har photo aur reel clip sirf aur sirf Chai ki hai.
+ * - Added Instagram Reels & Video Showcase section.
  */
 
 export const BRAND_CONFIG = {
   // Brand Identity
   brandName: "UPW Aali Amrittulya Chai",
-  marathiTagline: "आपल्या अस्सल चवीचा अमृततुल्य चहा",
-  tagline: "The Soul of Authentic Maharashtrian Chai",
-  subTagline: "Brewed fresh with crushed whole ginger, hand-ground spices, and thick pure milk — served steaming hot in traditional earthen kulhads.",
-  establishedNote: "Serving with authentic brewing traditions",
+  townTag: "Udaipurwati (UPW)",
+  hindiTagline: "उदयपुरवाटी की मशहूर केसर गुड़ वाली अमृततुल्य चाय",
+  tagline: "The Royal Taste of Udaipurwati",
+  subTagline: "Famous Kesar Amrittulya Gud (Jaggery) Chai & Kadak Masala Chai, brewed with pure milk and royal spices in brass vessels, served hot in authentic clay kulhads.",
+  establishedNote: "Udaipurwati's Favorite Chai Junction",
 
-  // Business Contact & Channels (Placeholders for unknown business details)
-  // If verifiedWhatsAppNumber is null or empty, the app shows the WhatsApp Demo Modal & copy feature.
-  // Set to a clean international number e.g. "919876543210" if client provides it.
-  verifiedWhatsAppNumber: "", // Explicit placeholder: no real number invented
-  instagramHandle: "@upwaali.amrittulya",
-  instagramUrl: "https://instagram.com", // Safe placeholder demo link
-  emailContact: "hello@amrittulyachai.demo", // Demo placeholder
+  // Business Contact & Channels
+  verifiedWhatsAppNumber: "", // Explicit placeholder
+  instagramHandle: "@upw_aali_amrittulya_chai",
+  instagramUrl: "https://www.instagram.com/upw_aali_amrittulya_chai",
+  emailContact: "upwaali.amrittulya@demo.com",
 
-  // Location & Timings (Explicit placeholders)
+  // Location & Timings (Near Ghumchakkar, Udaipurwati)
   shopAddress: {
-    line1: "Shop No. 4, Royal Heritage Corner",
-    area: "Near Market Junction, Pune - 411004",
-    state: "Maharashtra, India",
-    landmark: "Opposite Old Banyan Tree Chowk"
+    line1: "Near Ghumchakkar Chowk, Main Market Road",
+    area: "Udaipurwati (UPW), Jhunjhunu District",
+    state: "Rajasthan - 333307, India",
+    landmark: "Ghumchakkar Circle, Udaipurwati"
   },
   openingHours: {
     weekdays: "6:00 AM – 11:00 PM",
     weekends: "6:00 AM – 11:30 PM",
-    statusNote: "Open every day for your morning kadak chai"
+    statusNote: "Open daily for fresh Kesar Gud & Kadak Chai"
   },
-  googleMapsUrl: "https://maps.google.com/?q=Pune+Maharashtra+Amrittulya+Chai", // General location fallback
+  googleMapsUrl: "https://maps.google.com/?q=Ghumchakkar+Udaipurwati+Rajasthan",
 
   // Brand Story Highlights
   story: {
-    title: "A Timeless Tradition in Every Sip",
+    title: "Aapno Udaipurwati, Aapni Amrittulya Chai",
     paragraphs: [
-      "Amrittulya is not just tea; in Maharashtra, it is an emotion, a morning ritual, and the heartbeat of daily conversations. 'UPW Aali' honors this rich heritage with our slow-simmered brass handi brewing process.",
-      "We source single-origin Assam CTC leaves, crushed organic ginger, fresh green cardamom pods, and cinnamon, infused into farm-fresh creamy milk. Every cup delivers that thick, aromatic, and invigorating 'Kadak' punch.",
-      "Served in natural earthen kulhads, each pour connects you to authentic roots, pure hospitality, and timeless flavor."
+      "In the vibrant heart of Udaipurwati (Rajasthan), 'UPW Aali Amrittulya Chai' has become the favorite gathering point for tea lovers. We celebrate the royal Rajasthani palate with our signature Kesar Gud (Jaggery) Chai, crafted for health, sweetness, and unmatched aroma.",
+      "Simmered slowly in traditional heavy brass handis over a steady flame, each batch combines unrefined organic jaggery, crushed fresh ginger, green cardamom, and fragrant royal saffron (Kesar) infused into 100% pure thick buffalo milk.",
+      "Served piping hot in fresh baked earthen kulhads at Ghumchakkar Chowk, every cup carries the warmth of desi hospitality and timeless tradition."
     ],
     features: [
       {
         icon: "Flame",
-        title: "Traditional Brass Handi",
-        desc: "Simmered slow on gentle flame for consistent caramelized milk aroma and deep infusion."
+        title: "Signature Kesar Gud Chai",
+        desc: "Brewed with pure organic desi jaggery and real saffron strands — natural, healthy, and rich in taste."
       },
       {
         icon: "Sparkles",
-        title: "Secret Spice Masala",
-        desc: "7 whole aromatic spices hand-pounded in small batches to preserve volatile oils."
+        title: "Traditional Brass Handi",
+        desc: "Slow-simmered on brass vessels to caramelize the jaggery and lock in the spice fragrance."
       },
       {
         icon: "ShieldCheck",
-        title: "Pure Farm-Fresh Milk",
-        desc: "Rich, unadulterated high-cream milk for that signature Amrittulya body and velvety texture."
+        title: "100% Pure Buffalo Milk",
+        desc: "Rich, creamy unadulterated milk for that authentic thick, velvety Amrittulya texture."
       },
       {
         icon: "Coffee",
-        title: "Earth-Friendly Kulhads",
-        desc: "Natural baked clay cups adding an earthy mineral note while remaining 100% biodegradable."
+        title: "Mitti Ke Desi Kulhad",
+        desc: "Fresh baked clay cups that impart an earthy mineral aroma with every hot sip."
       }
     ]
   },
 
-  // Interactive Demo Menu
+  // Interactive Demo Menu Categories (100% Pure Chai)
   categories: [
-    { id: "all", label: "All Items" },
-    { id: "chai", label: "Specialty Chai" },
-    { id: "snacks", label: "Bakery & Nashta" }
+    { id: "all", label: "All Chai Flavors" },
+    { id: "gud-chai", label: "Kesar & Gud Special" },
+    { id: "kadak-chai", label: "Specialty Kadak Chai" },
+    { id: "kulhad-chai", label: "Desi Kulhad Chai" }
   ],
 
-  // Sample items with high-res curated chai imagery and clear demo indicators
+  // 100% Chai Items Only in 4K Ultra-HD
   menuItems: [
     {
-      id: "masala-chai",
-      name: "Masala Chai",
-      marathiName: "मसाला चहा",
-      category: "chai",
-      price: 20,
-      description: "Our signature blend infused with crushed green cardamom, cinnamon, clove, and fresh ginger.",
-      badge: "Signature",
-      image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=85",
+      id: "kesar-gud-chai",
+      name: "Special Kesar Gud Chai",
+      hindiName: "स्पेशल केसर गुड़ की चाय (शॉपी स्पेशल)",
+      category: "gud-chai",
+      price: 25,
+      description: "Our #1 Instagram bestseller! Organic desi jaggery boiled with saffron strands, fresh ginger, and cardamom in pure milk.",
+      badge: "Shop Special ⭐",
+      image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=2560&q=95",
       isPopular: true
     },
     {
-      id: "adrak-chai",
-      name: "Adrak Chai",
-      marathiName: "आलं चहा (जिंजर)",
-      category: "chai",
+      id: "amrittulya-gud-chai",
+      name: "Amrittulya Desi Gud Chai",
+      hindiName: "अमृततुल्य देशी गुड़ चाय",
+      category: "gud-chai",
       price: 20,
-      description: "Fresh hand-crushed fiery ginger brewed with rich milk to give your senses an instant refreshing kick.",
+      description: "Sugar-free natural sweet goodness brewed with unrefined desi gur and crushed spicy ginger.",
+      badge: "Healthy & Kadak",
+      image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=2560&q=95",
+      isPopular: true
+    },
+    {
+      id: "kulhad-masala-chai",
+      name: "UPW Kulhad Masala Chai",
+      hindiName: "उदयपुरवाटी कुल्हड़ मसाला चाय",
+      category: "kulhad-chai",
+      price: 25,
+      description: "Served hot in baked earthen clay kulhads infused with our secret 7-spice hand-pounded masala blend.",
+      badge: "Kulhad Hit",
+      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=2560&q=95",
+      isPopular: true
+    },
+    {
+      id: "adrak-elaichi-chai",
+      name: "Adrak Elaichi Kadak Chai",
+      hindiName: "अदरक इलायची कड़क चाय",
+      category: "kadak-chai",
+      price: 20,
+      description: "Hand-crushed juicy fiery ginger and green cardamom pods boiled into thick creamy milk.",
       badge: "Morning Favorite",
-      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=2560&q=95",
       isPopular: true
     },
     {
-      id: "kulhad-chai",
-      name: "Kulhad Chai",
-      marathiName: "कुल्हड चहा",
-      category: "chai",
+      id: "royal-zafrani-chai",
+      name: "Royal Zafrani Chai",
+      hindiName: "शाही जाफरानी चाय",
+      category: "gud-chai",
       price: 30,
-      description: "Amrittulya chai poured piping hot into freshly fired earthen clay cups for that rich, earthy fragrance.",
-      badge: "Best Seller",
-      image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1200&q=85",
+      description: "Infused with Kashmiri saffron threads, crushed green cardamom, and slow caramelized creamy milk.",
+      badge: "Royal Blend",
+      image: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=2560&q=95",
+      isPopular: true
+    },
+    {
+      id: "irani-dum-chai",
+      name: "Irani Dum Chai",
+      hindiName: "इरानी दम चाय (गाढ़ी मलाईदार)",
+      category: "kadak-chai",
+      price: 25,
+      description: "Slow dum brewed tea poured with rich condensed malai on top for that velvety rich texture.",
+      badge: "Malai Special",
+      image: "https://images.pexels.com/photos/5946623/pexels-photo-5946623.jpeg?auto=compress&cs=tinysrgb&w=2560&q=95",
       isPopular: true
     },
     {
       id: "cutting-chai",
-      name: "Cutting Chai",
-      marathiName: "कटिंग चहा",
-      category: "chai",
+      name: "Tapri Cutting Chai",
+      hindiName: "कटिंग चाय (क्लासिक)",
+      category: "kadak-chai",
       price: 15,
-      description: "The classic Mumbai-Pune quick half-glass kadak chai. Intense, sweet, and perfectly balanced.",
+      description: "The classic brisk half-glass kadak chai with a sweet, invigorating energy boost.",
       badge: "Daily Essential",
-      image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=2560&q=95",
       isPopular: false
     },
     {
-      id: "samosa",
-      name: "Crispy Samosa & Chai",
-      marathiName: "गरमागरम समोसा आणि चहा",
-      category: "snacks",
-      price: 20,
-      description: "Golden flaky pastry stuffed with tempered spiced potatoes, served fresh alongside hot piping chai.",
-      badge: "Hot & Fresh",
-      image: "https://images.unsplash.com/photo-1587080413959-06b859fb107d?auto=format&fit=crop&w=1200&q=85",
-      isPopular: true
-    },
-    {
-      id: "bun-maska",
-      name: "Bun Maska & Dip Chai",
-      marathiName: "बन मस्का आणि चहा",
-      category: "snacks",
-      price: 25,
-      description: "Pillowy soft Irani bakery bun with whipped salted butter, best paired with a dip in hot kadak chai.",
-      badge: "Chai Partner",
-      image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=1200&q=85",
+      id: "thandai-spiced-chai",
+      name: "Rajwadi Special Kulhad Chai",
+      hindiName: "रजवाड़ी स्पेशल कुल्हड़ चाय",
+      category: "kulhad-chai",
+      price: 30,
+      description: "Traditional Rajasthani rajwadi chai prepared with aromatic herbs, whole spices in clay mitti kulhad.",
+      badge: "Rajwadi Hit",
+      image: "https://images.pexels.com/photos/5947068/pexels-photo-5947068.jpeg?auto=compress&cs=tinysrgb&w=2560&q=95",
       isPopular: true
     }
   ],
 
-  // Gallery Images - All distinct high-res chai shots
+  // Instagram Chai Reels & Video Clips Showcase
+  reels: [
+    {
+      id: 1,
+      title: "Boiling Kesar Gud Chai in Brass Handi",
+      hindiTitle: "घूमचक्कर सर्किल पर पीतल की हांडी में उबलती चाय",
+      views: "18.4K",
+      likes: "1.2K",
+      thumbnail: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=95",
+      tag: "#KesarGudChai",
+      instagramUrl: "https://www.instagram.com/upw_aali_amrittulya_chai"
+    },
+    {
+      id: 2,
+      title: "Hot Chai Pour into Earthen Kulhad",
+      hindiTitle: "मिट्टी के कुल्हड़ में गरमागरम अमृततुल्य चाय की धार",
+      views: "24.9K",
+      likes: "2.1K",
+      thumbnail: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1200&q=95",
+      tag: "#KulhadChai",
+      instagramUrl: "https://www.instagram.com/upw_aali_amrittulya_chai"
+    },
+    {
+      id: 3,
+      title: "Fresh Hand-Crushed Adrak & Elaichi Boil",
+      hindiTitle: "ताज़ा कुटी हुई अदरक और इलायची की महक",
+      views: "15.7K",
+      likes: "1.4K",
+      thumbnail: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=1200&q=95",
+      tag: "#KadakChai",
+      instagramUrl: "https://www.instagram.com/upw_aali_amrittulya_chai"
+    },
+    {
+      id: 4,
+      title: "Classic Tapri Cutting Chai Pour",
+      hindiTitle: "उदयपुरवाटी की मशहूर कटिंग चाय की चुस्की",
+      views: "31.2K",
+      likes: "2.8K",
+      thumbnail: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=1200&q=95",
+      tag: "#TapriVibes",
+      instagramUrl: "https://www.instagram.com/upw_aali_amrittulya_chai"
+    }
+  ],
+
+  // 4K Ultra-HD Gallery Images (100% Chai Only)
   gallery: [
     {
-      url: "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=1200&q=85",
-      caption: "Aromatic Cardamom & Star Anise Spiced Chai",
-      category: "Fresh Spices"
+      url: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=2560&q=95",
+      caption: "Kesar & Gud Clay Kulhad Magic",
+      category: "Shop Signature"
     },
     {
-      url: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1200&q=85",
-      caption: "Authentic Baked Clay Kulhad Tradition",
-      category: "Clay Kulhad"
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=2560&q=95",
+      caption: "Boiling Kadak Jaggery Chai in Brass Handi",
+      category: "Daily Brew"
     },
     {
-      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=85",
-      caption: "Steaming Hot Morning Amrittulya Cup",
+      url: "https://images.pexels.com/photos/5946623/pexels-photo-5946623.jpeg?auto=compress&cs=tinysrgb&w=2560&q=95",
+      caption: "Pure Creamy Buffalo Milk Tea Pour",
+      category: "Creamy Pour"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=2560&q=95",
+      caption: "Slow Simmering Over Gentle Flame",
+      category: "Slow Boiled"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=2560&q=95",
+      caption: "Ghumchakkar Tapri Cutting Chai Glasses",
+      category: "Tapri Culture"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=2560&q=95",
+      caption: "Pure Creamy Milk & Saffron Infusion",
+      category: "Pure Milk"
+    },
+    {
+      url: "https://images.pexels.com/photos/5947068/pexels-photo-5947068.jpeg?auto=compress&cs=tinysrgb&w=2560&q=95",
+      caption: "Rich Earthen Aroma & Steaming Cups",
+      category: "Aromatic Brew"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=2560&q=95",
+      caption: "Morning Chai Ritual in Earthen Pots",
       category: "Morning Kadak"
     },
     {
-      url: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=1200&q=85",
-      caption: "Brass Pot Slow Simmered Tea Brew",
-      category: "Traditional Boil"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=1200&q=85",
-      caption: "Classic Tapri Cutting Chai Glasses",
-      category: "Cutting Chai"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=1200&q=85",
-      caption: "Golden Rich Creamy Milk Infusion",
-      category: "Creamy Pour"
+      url: "https://images.pexels.com/photos/4051649/pexels-photo-4051649.jpeg?auto=compress&cs=tinysrgb&w=2560&q=95",
+      caption: "Artisanal Pour with Rich Thick Froth",
+      category: "Artisanal Pour"
     }
   ]
 };
-

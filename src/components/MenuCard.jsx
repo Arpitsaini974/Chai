@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, Minus, Check, ShoppingBag, Sparkles } from 'lucide-react';
+import { Plus, Minus, Check } from 'lucide-react';
 import ImageWithFallback from './ImageWithFallback';
 
 export default function MenuCard({
@@ -9,66 +9,64 @@ export default function MenuCard({
   onUpdateQuantity,
 }) {
   return (
-    <div className="group relative rounded-2xl overflow-hidden glass-card glass-card-hover flex flex-col h-full text-left transition-all duration-300">
+    <div className="group relative rounded-2xl overflow-hidden menu-tile flex flex-col sm:flex-row h-full text-left transition-all duration-300">
       
-      {/* Product Image & Badges */}
-      <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-[#21130D]">
+      {/* Product Image Tile (Square / Horizontal Aspect) */}
+      <div className="relative sm:w-44 md:w-48 h-48 sm:h-auto shrink-0 overflow-hidden bg-[#21130D]">
         <ImageWithFallback
           src={item.image}
           alt={item.name}
-          className="w-full h-full group-hover:scale-105 transition-transform duration-500 ease-out"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           fallbackText={item.name}
         />
         
         {/* Dark Gradient Overlay for contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#21130D] via-transparent to-black/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#120C09] via-transparent to-transparent pointer-events-none" />
 
         {/* Top Badges */}
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+        <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1 z-10">
           {item.badge && (
-            <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#E99A3B] text-[#120C09] shadow-md">
+            <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#C96B26] to-[#E99A3B] text-[#120C09] shadow-md">
               {item.badge}
             </span>
           )}
         </div>
-
-        {/* Price Tag Overlay */}
-        <div className="absolute bottom-3 right-3 z-10">
-          <div className="bg-[#120C09]/90 backdrop-blur-md border border-[#E99A3B]/40 px-3 py-1 rounded-full shadow-lg">
-            <span className="text-sm font-extrabold text-[#E99A3B]">₹{item.price}</span>
-          </div>
-        </div>
       </div>
 
       {/* Product Content Details */}
-      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+      <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
         <div>
-          <div className="flex items-start justify-between gap-2 mb-1">
-            <h3 className="font-serif-display font-bold text-lg sm:text-xl text-[#F7F0E5] group-hover:text-[#E99A3B] transition-colors">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-serif-display font-bold text-base sm:text-lg text-[#F7F0E5] group-hover:text-[#F5B041] transition-colors leading-snug">
               {item.name}
             </h3>
+            
+            {/* Price Pill */}
+            <div className="shrink-0 px-2.5 py-1 rounded-full bg-[#120C09] border border-[#E99A3B]/40 shadow-inner">
+              <span className="text-sm font-black text-[#F5B041]">₹{item.price}</span>
+            </div>
           </div>
           
-          {item.marathiName && (
-            <p className="font-marathi-accent text-xs text-[#E99A3B]/80 font-medium mb-2">
-              {item.marathiName}
+          {(item.hindiName || item.marathiName) && (
+            <p className="font-serif-display text-xs text-[#E99A3B] font-medium mt-0.5 mb-1.5 flex items-center gap-1">
+              <span>{item.hindiName || item.marathiName}</span>
             </p>
           )}
 
-          <p className="text-xs sm:text-sm text-[#F7F0E5]/70 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-[#F7F0E5]/75 line-clamp-2 leading-relaxed font-light">
             {item.description}
           </p>
         </div>
 
         {/* Interactive Cart Action Controls */}
-        <div className="pt-2 border-t border-[#E99A3B]/10 flex items-center justify-between">
-          <div className="text-xs font-semibold text-[#F7F0E5]/50">
+        <div className="pt-2 border-t border-[#E99A3B]/15 flex items-center justify-between">
+          <div className="text-[11px] font-semibold text-[#F7F0E5]/60">
             {cartQuantity > 0 ? (
-              <span className="text-[#E99A3B] flex items-center gap-1 font-bold">
+              <span className="text-[#F5B041] flex items-center gap-1 font-bold">
                 <Check className="w-3.5 h-3.5" /> Added ({cartQuantity})
               </span>
             ) : (
-              "Sample Price: ₹" + item.price
+              "Piping Hot Serve"
             )}
           </div>
 
@@ -77,14 +75,14 @@ export default function MenuCard({
               <button
                 type="button"
                 onClick={() => onAddToCart(item)}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#21130D] hover:bg-[#E99A3B] text-[#F7F0E5] hover:text-[#120C09] border border-[#E99A3B]/40 hover:border-[#E99A3B] text-xs font-bold transition-all duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#E99A3B]"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-gradient-to-r from-[#21130D] to-[#2e1910] hover:from-[#C96B26] hover:to-[#E99A3B] text-[#F7F0E5] hover:text-[#120C09] border border-[#E99A3B]/40 hover:border-[#E99A3B] text-xs font-bold transition-all duration-200 shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#E99A3B]"
                 aria-label={`Add ${item.name} to order`}
               >
                 <Plus className="w-3.5 h-3.5" />
-                <span>Add</span>
+                <span>Add +</span>
               </button>
             ) : (
-              <div className="inline-flex items-center bg-[#120C09] rounded-xl border border-[#E99A3B]/40 p-1 shadow-inner">
+              <div className="inline-flex items-center bg-[#120C09] rounded-xl border border-[#E99A3B]/50 p-1 shadow-inner">
                 <button
                   type="button"
                   onClick={() => onUpdateQuantity(item.id, cartQuantity - 1)}
@@ -93,7 +91,7 @@ export default function MenuCard({
                 >
                   <Minus className="w-3 h-3" />
                 </button>
-                <span className="w-8 text-center text-xs font-bold text-[#E99A3B]">
+                <span className="w-8 text-center text-xs font-black text-[#F5B041]">
                   {cartQuantity}
                 </span>
                 <button

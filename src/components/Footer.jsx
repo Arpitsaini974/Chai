@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, MessageCircle, Heart, ArrowUp } from 'lucide-react';
+import { Coffee, MessageCircle, ArrowUp } from 'lucide-react';
 import { BRAND_CONFIG } from '../brandConfig';
 
 const InstagramIcon = ({ className = "w-5 h-5" }) => (
@@ -17,6 +17,8 @@ const InstagramIcon = ({ className = "w-5 h-5" }) => (
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer({ onOpenCart }) {
   const scrollToTop = () => {
@@ -49,12 +51,12 @@ export default function Footer({ onOpenCart }) {
             </div>
 
             <p className="text-xs text-[#F7F0E5]/70 leading-relaxed">
-              Brewing authentic Maharashtrian tea in traditional brass handis with whole pounded spices and pure milk.
+              उदयपुरवाटी की प्रसिद्ध केसर गुड़ अमृततुल्य चाय, कुल्हड़ चाय और शुद्ध दूध व देशी मसालों का बेमिसाल स्वाद।
             </p>
 
             <div className="pt-1">
               <span className="text-[11px] font-semibold text-[#E99A3B] bg-[#21130D] px-2.5 py-1 rounded-full border border-[#E99A3B]/20">
-                {BRAND_CONFIG.marathiTagline}
+                {BRAND_CONFIG.hindiTagline}
               </span>
             </div>
           </div>
@@ -150,7 +152,7 @@ export default function Footer({ onOpenCart }) {
         {/* Bottom Disclaimers & Copyright */}
         <div className="pt-8 border-t border-[#21130D] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F7F0E5]/50">
           <div className="text-center sm:text-left space-y-1">
-            <p>© {new Date().getFullYear()} {BRAND_CONFIG.brandName}. All rights reserved.</p>
+            <p>© {CURRENT_YEAR} {BRAND_CONFIG.brandName}. All rights reserved.</p>
             <p className="text-[11px] text-[#E99A3B]/70">
               Client Presentation Demo — Menu items, sample pricing & placeholders for presentation purposes.
             </p>

@@ -10,10 +10,10 @@ import {
   Copy,
   Check,
   AlertCircle,
-  HelpCircle,
   Info
 } from 'lucide-react';
 import { BRAND_CONFIG } from '../brandConfig';
+import ImageWithFallback from './ImageWithFallback';
 
 export default function CartDrawer({
   isOpen,
@@ -174,10 +174,11 @@ export default function CartDrawer({
                       className="p-3.5 rounded-xl bg-[#21130D]/60 border border-[#E99A3B]/20 flex items-center justify-between gap-3 transition-colors hover:border-[#E99A3B]/40"
                     >
                       <div className="flex items-center gap-3 min-w-0">
-                        <img
+                        <ImageWithFallback
                           src={item.image}
                           alt={item.name}
-                          className="w-12 h-12 rounded-lg object-cover bg-[#120C09] shrink-0 border border-[#E99A3B]/20"
+                          className="w-12 h-12 rounded-lg shrink-0 border border-[#E99A3B]/20"
+                          fallbackText={item.name}
                         />
                         <div className="min-w-0">
                           <h4 className="font-serif-display font-semibold text-sm text-[#F7F0E5] truncate">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, ExternalLink, Navigation, Phone, AlertCircle } from 'lucide-react';
+import { MapPin, Clock, ExternalLink, Navigation, AlertCircle } from 'lucide-react';
 import { BRAND_CONFIG } from '../brandConfig';
 
 export default function LocationSection() {
@@ -43,10 +43,13 @@ export default function LocationSection() {
                     {BRAND_CONFIG.shopAddress.line1}
                   </p>
                   <p className="text-sm text-[#F7F0E5]/80">
-                    {BRAND_CONFIG.shopAddress.area}
+                    {BRAND_CONFIG.shopAddress.area}, {BRAND_CONFIG.shopAddress.state}
                   </p>
                   <p className="text-xs text-[#E99A3B] font-medium">
                     Landmark: {BRAND_CONFIG.shopAddress.landmark}
+                  </p>
+                  <p className="text-xs text-[#F7F0E5]/60 pt-1">
+                    Instagram: <a href={BRAND_CONFIG.instagramUrl} target="_blank" rel="noreferrer" className="text-[#E99A3B] underline font-semibold">{BRAND_CONFIG.instagramHandle}</a>
                   </p>
                 </div>
               </div>
@@ -111,13 +114,13 @@ export default function LocationSection() {
 
               <div className="relative z-10 max-w-sm space-y-2">
                 <h4 className="font-serif-display font-bold text-lg text-[#F7F0E5]">
-                  Pune Heritage Chai Junction
+                  Ghumchakkar Circle, Udaipurwati
                 </h4>
                 <p className="text-xs text-[#F7F0E5]/70">
-                  Ready to welcome you with the freshest aromatic cardamom chai.
+                  Kesar Gud & Kadak Amrittulya Chai Destination (Rajasthan)
                 </p>
                 <span className="inline-block mt-2 text-xs font-semibold px-3 py-1 rounded-full bg-[#21130D] border border-[#E99A3B]/30 text-[#E99A3B]">
-                  Interactive Google Maps Integration Ready
+                  Official Instagram: @upw_aali_amrittulya_chai
                 </span>
               </div>
             </div>

@@ -7,10 +7,19 @@
     --color-cream: #F7F0E5;
     --color-chai-amber: #E99A3B;
     --color-burnt-orange: #C96B26;
+    --color-royal-gold: #D4AF37;
   }
 
   body {
+    /* Rich Royal Multi-gradient Background with subtle warm chai ambient glow */
     background-color: #120C09;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(201, 107, 38, 0.16) 0%, transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(233, 154, 59, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 15% 65%, rgba(212, 175, 55, 0.08) 0%, transparent 35%),
+      radial-gradient(circle at 50% 95%, rgba(201, 107, 38, 0.12) 0%, transparent 50%),
+      linear-gradient(to bottom, #120C09, #1a0f0a, #120C09);
+    background-attachment: fixed;
     color: #F7F0E5;
     font-family: 'Outfit', sans-serif;
     margin: 0;
@@ -31,58 +40,93 @@
   }
 }
 
-/* Custom Steam Animation */
+/* Subtle Royal Background Watermark Pattern */
+.royal-bg-pattern {
+  background-image: radial-gradient(rgba(233, 154, 59, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom Steam & Aroma Animation */
 @keyframes steamRise {
   0% {
     transform: translateY(0) scaleX(1) scaleY(1);
     opacity: 0;
   }
   25% {
-    opacity: 0.6;
-    transform: translateY(-15px) scaleX(1.1) scaleY(1.2);
+    opacity: 0.7;
+    transform: translateY(-20px) scaleX(1.15) scaleY(1.25);
   }
   50% {
-    transform: translateY(-35px) scaleX(0.9) scaleY(1.4) skewX(2deg);
-    opacity: 0.4;
+    transform: translateY(-45px) scaleX(0.85) scaleY(1.45) skewX(3deg);
+    opacity: 0.5;
   }
   75% {
-    transform: translateY(-55px) scaleX(1.2) scaleY(1.6) skewX(-3deg);
-    opacity: 0.2;
+    transform: translateY(-70px) scaleX(1.3) scaleY(1.7) skewX(-4deg);
+    opacity: 0.25;
   }
   100% {
-    transform: translateY(-80px) scaleX(1.4) scaleY(1.8);
+    transform: translateY(-105px) scaleX(1.5) scaleY(2);
     opacity: 0;
   }
 }
 
 .steam-particle-1 {
-  animation: steamRise 3.5s ease-in-out infinite;
+  animation: steamRise 3.6s ease-in-out infinite;
 }
 
 .steam-particle-2 {
-  animation: steamRise 4.2s ease-in-out infinite 0.7s;
+  animation: steamRise 4.3s ease-in-out infinite 0.7s;
 }
 
 .steam-particle-3 {
-  animation: steamRise 3.8s ease-in-out infinite 1.4s;
+  animation: steamRise 3.9s ease-in-out infinite 1.4s;
 }
 
-/* Smooth glass effect */
-.glass-card {
-  background: rgba(33, 19, 13, 0.75);
+/* Floating 3D Gentle Float Animation */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float-subtle {
+  animation: float3D 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float3D 5.2s ease-in-out infinite 1s reverse;
+}
+
+/* Royal Gold & Amber Foil Border Card */
+.royal-glass-card {
+  background: linear-gradient(145deg, rgba(33, 19, 13, 0.88) 0%, rgba(20, 12, 8, 0.94) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.royal-glass-card:hover {
+  border-color: rgba(233, 154, 59, 0.65);
+  box-shadow: 0 22px 45px -12px rgba(0, 0, 0, 0.85), 0 0 25px rgba(233, 154, 59, 0.22);
+}
+
+/* Sleek Horizontal Menu Tile */
+.menu-tile {
+  background: linear-gradient(135deg, rgba(33, 19, 13, 0.82) 0%, rgba(18, 12, 9, 0.92) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(233, 154, 59, 0.15);
-}
-
-.glass-card-hover {
+  border: 1px solid rgba(233, 154, 59, 0.22);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-card-hover:hover {
-  border-color: rgba(233, 154, 59, 0.45);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6), 0 0 20px 0 rgba(233, 154, 59, 0.12);
+.menu-tile:hover {
+  border-color: rgba(233, 154, 59, 0.55);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.65), 0 0 20px rgba(233, 154, 59, 0.18);
 }
 
 /* Subtle glow */
@@ -91,7 +135,13 @@
 }
 
 .amber-text-gradient {
-  background: linear-gradient(135deg, #F7F0E5 20%, #E99A3B 70%, #C96B26 100%);
+  background: linear-gradient(135deg, #FFF5EA 15%, #F5B041 55%, #E99A3B 80%, #C96B26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFFDF0 0%, #E5C158 50%, #B8860B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

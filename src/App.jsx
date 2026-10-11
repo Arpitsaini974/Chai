@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MenuSection from './components/MenuSection';
+import ReelsSection from './components/ReelsSection';
 import BrandStory from './components/BrandStory';
 import Gallery from './components/Gallery';
 import LocationSection from './components/LocationSection';
@@ -71,7 +72,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#120C09] text-[#F7F0E5] flex flex-col font-sans selection:bg-[#E99A3B] selection:text-[#120C09]">
+    <div className="min-h-screen royal-bg-pattern text-[#F7F0E5] flex flex-col font-sans selection:bg-[#E99A3B] selection:text-[#120C09]">
       
       {/* Top Navigation */}
       <Navbar
@@ -88,6 +89,7 @@ export default function App() {
           onUpdateQuantity={handleUpdateQuantity}
           onOpenCart={() => setIsCartOpen(true)}
         />
+        <ReelsSection />
         <BrandStory />
         <Gallery />
         <LocationSection />
@@ -106,18 +108,33 @@ export default function App() {
         onClearCart={handleClearCart}
       />
 
-      {/* Mobile Floating Cart Indicator Button */}
+      {/* Sleek Floating Bottom Order Bar (Swiggy/Zomato style quick checkout feel) */}
       {totalCartCount > 0 && !isCartOpen && (
-        <div className="fixed bottom-6 right-6 z-40 sm:hidden">
-          <button
-            type="button"
-            onClick={() => setIsCartOpen(true)}
-            className="flex items-center gap-2.5 px-5 py-3 rounded-full bg-gradient-to-r from-[#C96B26] to-[#E99A3B] text-[#120C09] font-bold shadow-2xl border-2 border-[#120C09] animate-bounce"
-            aria-label="View current cart"
-          >
-            <ShoppingBag className="w-5 h-5" />
-            <span>Order ({totalCartCount})</span>
-          </button>
+        <div className="fixed bottom-4 inset-x-4 sm:inset-x-auto sm:right-6 sm:w-96 z-40 animate-in fade-in slide-in-from-bottom-4 duration-300">
+          <div className="p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-[#1c0f09]/95 via-[#25140d]/95 to-[#1c0f09]/95 backdrop-blur-xl border border-[#D4AF37]/40 shadow-2xl shadow-black/80 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3 pl-1 min-w-0">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C96B26] to-[#E99A3B] text-[#120C09] flex items-center justify-center font-black shrink-0 shadow-md">
+                <ShoppingBag className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 text-left">
+                <p className="text-xs font-bold text-[#F7F0E5] truncate">
+                  {totalCartCount} {totalCartCount === 1 ? 'Chai' : 'Chais'} Selected
+                </p>
+                <p className="text-xs text-[#F5B041] font-black">
+                  Total: ₹{cartItems.reduce((sum, i) => sum + i.price * i.quantity, 0)}
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsCartOpen(true)}
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-extrabold text-xs tracking-wide shadow-lg shadow-[#25D366]/25 transition-transform duration-200 hover:scale-105 active:scale-95 shrink-0 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#25D366]"
+            >
+              <span>View & Order</span>
+              <span>→</span>
+            </button>
+          </div>
         </div>
       )}
 
