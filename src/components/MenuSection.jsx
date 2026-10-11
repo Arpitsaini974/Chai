@@ -27,22 +27,22 @@ export default function MenuSection({
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#21130D] border border-[#E99A3B]/30 text-xs font-semibold text-[#E99A3B]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F9F3E5] border border-[#C96B26]/30 text-xs font-bold text-[#9E4712]">
             <Coffee className="w-3.5 h-3.5" />
             <span>Pure Ingredients • Traditional Simmering</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F7F0E5]">
-            Our Signature <span className="amber-text-gradient">Chai & Nashta</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2A170F]">
+            Our Signature <span className="amber-text-gradient">Chai Collection</span>
           </h2>
           
-          <p className="text-sm sm:text-base text-[#F7F0E5]/70">
+          <p className="text-sm sm:text-base text-[#5C4337] font-normal">
             Handcrafted with authentic spices and served piping hot. Choose your favorites to build an instant WhatsApp order.
           </p>
 
           {/* Discreet Demo Notice */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#21130D]/60 border border-[#E99A3B]/20 text-[11px] text-[#F7F0E5]/60 mt-1">
-            <Info className="w-3.5 h-3.5 text-[#E99A3B]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#F9F3E5] border border-[#C96B26]/20 text-[11px] text-[#5C4337] mt-1">
+            <Info className="w-3.5 h-3.5 text-[#C96B26]" />
             <span>Demo menu — sample items and prices.</span>
           </div>
         </div>
@@ -56,10 +56,10 @@ export default function MenuSection({
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E99A3B] ${
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#9E4712] ${
                   isActive
-                    ? 'bg-gradient-to-r from-[#C96B26] to-[#E99A3B] text-[#120C09] shadow-lg shadow-[#E99A3B]/20 scale-105'
-                    : 'bg-[#21130D] text-[#F7F0E5]/80 hover:text-[#F7F0E5] border border-[#E99A3B]/20 hover:border-[#E99A3B]/50'
+                    ? 'bg-gradient-to-r from-[#C96B26] to-[#E99A3B] text-white shadow-md scale-105'
+                    : 'bg-[#F9F3E5] text-[#5C4337] hover:text-[#2A170F] border border-[#C96B26]/25 hover:border-[#C96B26]/60 shadow-sm'
                 }`}
               >
                 {cat.label}

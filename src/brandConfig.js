@@ -12,7 +12,7 @@ export const BRAND_CONFIG = {
   // Brand Identity
   brandName: "UPW Aali Amrittulya Chai",
   townTag: "Udaipurwati (UPW)",
-  hindiTagline: "उदयपुरवाटी की मशहूर केसर गुड़ वाली अमृततुल्य चाय",
+  hindiTagline: "Authentic Kesar Gud Amrittulya Chai of Udaipurwati",
   tagline: "The Royal Taste of Udaipurwati",
   subTagline: "Famous Kesar Amrittulya Gud (Jaggery) Chai & Kadak Masala Chai, brewed with pure milk and royal spices in brass vessels, served hot in authentic clay kulhads.",
   establishedNote: "Udaipurwati's Favorite Chai Junction",
@@ -82,7 +82,6 @@ export const BRAND_CONFIG = {
     {
       id: "kesar-gud-chai",
       name: "Special Kesar Gud Chai",
-      hindiName: "स्पेशल केसर गुड़ की चाय (शॉपी स्पेशल)",
       category: "gud-chai",
       price: 25,
       description: "Our #1 Instagram bestseller! Organic desi jaggery boiled with saffron strands, fresh ginger, and cardamom in pure milk.",
@@ -93,7 +92,6 @@ export const BRAND_CONFIG = {
     {
       id: "amrittulya-gud-chai",
       name: "Amrittulya Desi Gud Chai",
-      hindiName: "अमृततुल्य देशी गुड़ चाय",
       category: "gud-chai",
       price: 20,
       description: "Sugar-free natural sweet goodness brewed with unrefined desi gur and crushed spicy ginger.",
@@ -104,18 +102,16 @@ export const BRAND_CONFIG = {
     {
       id: "kulhad-masala-chai",
       name: "UPW Kulhad Masala Chai",
-      hindiName: "उदयपुरवाटी कुल्हड़ मसाला चाय",
       category: "kulhad-chai",
       price: 25,
       description: "Served hot in baked earthen clay kulhads infused with our secret 7-spice hand-pounded masala blend.",
       badge: "Kulhad Hit",
-      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=2560&q=95",
+      image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=2560&q=95",
       isPopular: true
     },
     {
       id: "adrak-elaichi-chai",
       name: "Adrak Elaichi Kadak Chai",
-      hindiName: "अदरक इलायची कड़क चाय",
       category: "kadak-chai",
       price: 20,
       description: "Hand-crushed juicy fiery ginger and green cardamom pods boiled into thick creamy milk.",
@@ -126,7 +122,6 @@ export const BRAND_CONFIG = {
     {
       id: "royal-zafrani-chai",
       name: "Royal Zafrani Chai",
-      hindiName: "शाही जाफरानी चाय",
       category: "gud-chai",
       price: 30,
       description: "Infused with Kashmiri saffron threads, crushed green cardamom, and slow caramelized creamy milk.",
@@ -137,7 +132,6 @@ export const BRAND_CONFIG = {
     {
       id: "irani-dum-chai",
       name: "Irani Dum Chai",
-      hindiName: "इरानी दम चाय (गाढ़ी मलाईदार)",
       category: "kadak-chai",
       price: 25,
       description: "Slow dum brewed tea poured with rich condensed malai on top for that velvety rich texture.",
@@ -148,7 +142,6 @@ export const BRAND_CONFIG = {
     {
       id: "cutting-chai",
       name: "Tapri Cutting Chai",
-      hindiName: "कटिंग चाय (क्लासिक)",
       category: "kadak-chai",
       price: 15,
       description: "The classic brisk half-glass kadak chai with a sweet, invigorating energy boost.",
@@ -159,7 +152,6 @@ export const BRAND_CONFIG = {
     {
       id: "thandai-spiced-chai",
       name: "Rajwadi Special Kulhad Chai",
-      hindiName: "रजवाड़ी स्पेशल कुल्हड़ चाय",
       category: "kulhad-chai",
       price: 30,
       description: "Traditional Rajasthani rajwadi chai prepared with aromatic herbs, whole spices in clay mitti kulhad.",

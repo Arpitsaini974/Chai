@@ -4,22 +4,22 @@ import { BRAND_CONFIG } from '../brandConfig';
 
 export default function LocationSection() {
   return (
-    <section id="location" className="py-20 bg-[#120C09] relative border-t border-[#E99A3B]/10 scroll-mt-16">
+    <section id="location" className="py-20 relative border-t border-[#C96B26]/15 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#21130D] border border-[#E99A3B]/30 text-xs font-semibold text-[#E99A3B]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F9F3E5] border border-[#C96B26]/30 text-xs font-bold text-[#9E4712]">
             <MapPin className="w-3.5 h-3.5" />
             <span>Visit the Chai Outlet</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F7F0E5]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2A170F]">
             Shop Location & <span className="amber-text-gradient">Timings</span>
           </h2>
           
-          <p className="text-sm sm:text-base text-[#F7F0E5]/70">
-            Drop by for your morning kadak chai or evening chai-samosa break.
+          <p className="text-sm sm:text-base text-[#5C4337] font-normal">
+            Drop by for your morning kadak chai or evening chai break at Ghumchakkar Chowk.
           </p>
         </div>
 
@@ -27,47 +27,47 @@ export default function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Card 1: Address and Timings */}
-          <div className="lg:col-span-6 flex flex-col justify-between p-8 rounded-3xl glass-card border border-[#E99A3B]/30 space-y-8 text-left shadow-xl">
+          <div className="lg:col-span-6 flex flex-col justify-between p-8 rounded-3xl royal-glass-card border border-[#C96B26]/30 space-y-8 text-left shadow-xl">
             
             <div className="space-y-6">
               {/* Address Block */}
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#E99A3B]/10 border border-[#E99A3B]/30 flex items-center justify-center text-[#E99A3B] shrink-0 mt-1">
+                <div className="w-12 h-12 rounded-2xl bg-[#F9F3E5] border border-[#C96B26]/30 flex items-center justify-center text-[#9E4712] shrink-0 mt-1">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-serif-display font-bold text-lg text-[#F7F0E5]">
+                  <h3 className="font-serif-display font-extrabold text-lg text-[#2A170F]">
                     {BRAND_CONFIG.brandName}
                   </h3>
-                  <p className="text-sm text-[#F7F0E5]/80">
+                  <p className="text-sm text-[#5C4337]">
                     {BRAND_CONFIG.shopAddress.line1}
                   </p>
-                  <p className="text-sm text-[#F7F0E5]/80">
+                  <p className="text-sm text-[#5C4337]">
                     {BRAND_CONFIG.shopAddress.area}, {BRAND_CONFIG.shopAddress.state}
                   </p>
-                  <p className="text-xs text-[#E99A3B] font-medium">
+                  <p className="text-xs text-[#9E4712] font-bold">
                     Landmark: {BRAND_CONFIG.shopAddress.landmark}
                   </p>
-                  <p className="text-xs text-[#F7F0E5]/60 pt-1">
-                    Instagram: <a href={BRAND_CONFIG.instagramUrl} target="_blank" rel="noreferrer" className="text-[#E99A3B] underline font-semibold">{BRAND_CONFIG.instagramHandle}</a>
+                  <p className="text-xs text-[#5C4337] pt-1">
+                    Instagram: <a href={BRAND_CONFIG.instagramUrl} target="_blank" rel="noreferrer" className="text-[#9E4712] underline font-bold">{BRAND_CONFIG.instagramHandle}</a>
                   </p>
                 </div>
               </div>
 
               {/* Hours Block */}
-              <div className="flex items-start gap-4 pt-4 border-t border-[#21130D]">
-                <div className="w-12 h-12 rounded-2xl bg-[#E99A3B]/10 border border-[#E99A3B]/30 flex items-center justify-center text-[#E99A3B] shrink-0 mt-1">
+              <div className="flex items-start gap-4 pt-4 border-t border-[#C96B26]/15">
+                <div className="w-12 h-12 rounded-2xl bg-[#F9F3E5] border border-[#C96B26]/30 flex items-center justify-center text-[#9E4712] shrink-0 mt-1">
                   <Clock className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-serif-display font-bold text-lg text-[#F7F0E5]">
+                  <h3 className="font-serif-display font-extrabold text-lg text-[#2A170F]">
                     Serving Hours
                   </h3>
-                  <div className="text-sm text-[#F7F0E5]/80 space-y-0.5">
+                  <div className="text-sm text-[#5C4337] space-y-0.5 font-medium">
                     <p><strong>Mon – Fri:</strong> {BRAND_CONFIG.openingHours.weekdays}</p>
                     <p><strong>Sat – Sun:</strong> {BRAND_CONFIG.openingHours.weekends}</p>
                   </div>
-                  <p className="text-xs text-emerald-400 font-semibold pt-1">
+                  <p className="text-xs text-emerald-600 font-bold pt-1">
                     ● {BRAND_CONFIG.openingHours.statusNote}
                   </p>
                 </div>

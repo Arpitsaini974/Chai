@@ -11,6 +11,16 @@ import CartDrawer from './components/CartDrawer';
 import { ShoppingBag } from 'lucide-react';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    try {
+      const savedTheme = localStorage.getItem('upw_chai_theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch {
+      return 'light';
+    }
+  });
+
   const [cartItems, setCartItems] = useState(() => {
     try {
       const saved = localStorage.getItem('upw_chai_cart');
@@ -21,6 +31,29 @@ export default function App() {
   });
 
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Sync theme changes to document and localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('upw_chai_theme', theme);
+    } catch (err) {
+      console.warn("Could not save theme to localStorage:", err);
+    }
+
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.body.classList.add('light-theme');
+      document.body.classList.remove('dark-theme');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   // Sync cart to localStorage
   useEffect(() => {
@@ -72,12 +105,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen royal-bg-pattern text-[#F7F0E5] flex flex-col font-sans selection:bg-[#E99A3B] selection:text-[#120C09]">
+    <div className="min-h-screen royal-bg-pattern text-[#2A170F] dark:text-[#F7F0E5] flex flex-col font-sans selection:bg-[#E99A3B] selection:text-[#120C09] transition-colors duration-300">
       
       {/* Top Navigation */}
       <Navbar
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Main Content */}

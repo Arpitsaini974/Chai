@@ -7,21 +7,21 @@ export default function Gallery() {
   const [activeImage, setActiveImage] = useState(null);
 
   return (
-    <section id="gallery" className="py-20 bg-[#120C09] relative border-t border-[#E99A3B]/10 scroll-mt-16">
+    <section id="gallery" className="py-20 relative border-t border-[#C96B26]/15 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#21130D] border border-[#E99A3B]/30 text-xs font-semibold text-[#E99A3B]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F9F3E5] border border-[#C96B26]/30 text-xs font-bold text-[#9E4712]">
             <Camera className="w-3.5 h-3.5" />
             <span>Moments of Amrittulya</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F7F0E5]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2A170F]">
             Visuals from the <span className="amber-text-gradient">Chai Counter</span>
           </h2>
           
-          <p className="text-sm sm:text-base text-[#F7F0E5]/70">
+          <p className="text-sm sm:text-base text-[#5C4337] font-normal">
             A glimpse into the daily rhythm of bubbling brass handis, aromatic spices, and warm chai glasses.
           </p>
         </div>

@@ -83,25 +83,25 @@ export default function CartDrawer({
     <div className="fixed inset-0 z-50 overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#120C09] border-l border-[#E99A3B]/20 shadow-2xl flex flex-col justify-between">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-screen max-w-full sm:max-w-md bg-[#FDF9F0] dark:bg-[#120C09] text-[#2A170F] dark:text-[#F7F0E5] border-l border-[#C96B26]/30 shadow-2xl flex flex-col justify-between transition-colors">
           
           {/* Header */}
-          <div className="p-6 border-b border-[#21130D] flex items-center justify-between bg-[#21130D]/40">
+          <div className="p-4 sm:p-6 border-b border-[#C96B26]/20 dark:border-[#21130D] flex items-center justify-between bg-[#F9F3E5] dark:bg-[#21130D]/40">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E99A3B]/10 border border-[#E99A3B]/30 flex items-center justify-center text-[#E99A3B]">
+              <div className="w-10 h-10 rounded-xl bg-[#C96B26]/15 dark:bg-[#E99A3B]/10 border border-[#C96B26]/30 dark:border-[#E99A3B]/30 flex items-center justify-center text-[#9E4712] dark:text-[#E99A3B]">
                 <ShoppingBag className="w-5 h-5" />
               </div>
               <div>
-                <h2 id="cart-title" className="font-serif-display font-bold text-lg text-[#F7F0E5]">
+                <h2 id="cart-title" className="font-serif-display font-bold text-base sm:text-lg text-[#2A170F] dark:text-[#F7F0E5]">
                   Your Chai Order
                 </h2>
-                <p className="text-xs text-[#E99A3B]">
+                <p className="text-xs text-[#9E4712] dark:text-[#E99A3B] font-semibold">
                   {totalCount} {totalCount === 1 ? 'item' : 'items'} selected
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function CartDrawer({
                 <button
                   type="button"
                   onClick={onClearCart}
-                  className="p-2 text-xs text-[#F7F0E5]/50 hover:text-red-400 transition-colors rounded-lg hover:bg-[#21130D]"
+                  className="p-2 text-xs text-[#5C4337] dark:text-[#F7F0E5]/50 hover:text-red-500 transition-colors rounded-lg hover:bg-[#F2E8D5] dark:hover:bg-[#21130D]"
                   title="Clear entire cart"
                   aria-label="Clear cart"
                 >
@@ -122,7 +122,7 @@ export default function CartDrawer({
               <button
                 type="button"
                 onClick={onClose}
-                className="p-2 text-[#F7F0E5]/70 hover:text-[#F7F0E5] rounded-lg hover:bg-[#21130D] transition-colors focus:outline-none focus:ring-2 focus:ring-[#E99A3B]"
+                className="p-2 text-[#2A170F] dark:text-[#F7F0E5]/70 hover:text-[#9E4712] dark:hover:text-[#F7F0E5] rounded-lg hover:bg-[#F2E8D5] dark:hover:bg-[#21130D] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C96B26]"
                 aria-label="Close cart drawer"
               >
                 <X className="w-6 h-6" />
@@ -131,11 +131,11 @@ export default function CartDrawer({
           </div>
 
           {/* Drawer Body */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
             
             {/* Discreet Notice */}
-            <div className="p-3 rounded-xl bg-[#21130D]/70 border border-[#E99A3B]/20 flex items-start gap-2.5 text-xs text-[#F7F0E5]/70">
-              <Info className="w-4 h-4 text-[#E99A3B] shrink-0 mt-0.5" />
+            <div className="p-3 rounded-xl bg-[#F9F3E5] dark:bg-[#21130D]/70 border border-[#C96B26]/20 dark:border-[#E99A3B]/20 flex items-start gap-2.5 text-xs text-[#5C4337] dark:text-[#F7F0E5]/70">
+              <Info className="w-4 h-4 text-[#9E4712] dark:text-[#E99A3B] shrink-0 mt-0.5" />
               <span>
                 <strong>Demo Ordering:</strong> Orders will be formatted into a WhatsApp message. No backend or payment gateway required.
               </span>
@@ -144,21 +144,21 @@ export default function CartDrawer({
             {/* Empty State */}
             {cartItems.length === 0 ? (
               <div className="py-16 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#21130D] border border-[#E99A3B]/20 flex items-center justify-center mx-auto text-[#E99A3B]/60">
+                <div className="w-16 h-16 rounded-full bg-[#F9F3E5] dark:bg-[#21130D] border border-[#C96B26]/30 dark:border-[#E99A3B]/20 flex items-center justify-center mx-auto text-[#9E4712] dark:text-[#E99A3B]/60">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-serif-display text-lg font-bold text-[#F7F0E5]">
+                  <h3 className="font-serif-display text-lg font-bold text-[#2A170F] dark:text-[#F7F0E5]">
                     Your Cart is Empty
                   </h3>
-                  <p className="text-xs text-[#F7F0E5]/60 max-w-xs mx-auto">
-                    Craving a cup of piping hot Amrittulya chai or a crispy samosa? Add items from the menu to see the WhatsApp demo.
+                  <p className="text-xs text-[#5C4337] dark:text-[#F7F0E5]/60 max-w-xs mx-auto">
+                    Craving a cup of piping hot Amrittulya chai? Add items from the menu to see the WhatsApp demo order.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={onClose}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#21130D] hover:bg-[#C96B26]/30 border border-[#E99A3B]/30 text-xs font-bold text-[#E99A3B] transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#F9F3E5] dark:bg-[#21130D] hover:bg-[#F2E8D5] dark:hover:bg-[#C96B26]/30 border border-[#C96B26]/40 dark:border-[#E99A3B]/30 text-xs font-bold text-[#9E4712] dark:text-[#E99A3B] transition-all"
                 >
                   Explore Menu Items
                 </button>
@@ -171,43 +171,43 @@ export default function CartDrawer({
                   return (
                     <div
                       key={item.id}
-                      className="p-3.5 rounded-xl bg-[#21130D]/60 border border-[#E99A3B]/20 flex items-center justify-between gap-3 transition-colors hover:border-[#E99A3B]/40"
+                      className="p-3 sm:p-3.5 rounded-xl bg-white/80 dark:bg-[#21130D]/60 border border-[#C96B26]/20 dark:border-[#E99A3B]/20 flex items-center justify-between gap-3 transition-colors hover:border-[#C96B26]/40 shadow-sm"
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <ImageWithFallback
                           src={item.image}
                           alt={item.name}
-                          className="w-12 h-12 rounded-lg shrink-0 border border-[#E99A3B]/20"
+                          className="w-12 h-12 rounded-lg shrink-0 border border-[#C96B26]/20 dark:border-[#E99A3B]/20"
                           fallbackText={item.name}
                         />
                         <div className="min-w-0">
-                          <h4 className="font-serif-display font-semibold text-sm text-[#F7F0E5] truncate">
+                          <h4 className="font-serif-display font-semibold text-sm text-[#2A170F] dark:text-[#F7F0E5] truncate">
                             {item.name}
                           </h4>
-                          <p className="text-xs text-[#E99A3B] font-semibold">
-                            ₹{item.price} each • <span className="text-[#F7F0E5]/70">₹{lineTotal}</span>
+                          <p className="text-xs text-[#9E4712] dark:text-[#E99A3B] font-semibold">
+                            ₹{item.price} each • <span className="text-[#5C4337] dark:text-[#F7F0E5]/70">₹{lineTotal}</span>
                           </p>
                         </div>
                       </div>
 
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-1.5 shrink-0">
-                        <div className="inline-flex items-center bg-[#120C09] rounded-lg border border-[#E99A3B]/30 p-0.5">
+                        <div className="inline-flex items-center bg-[#F9F3E5] dark:bg-[#120C09] rounded-lg border border-[#C96B26]/30 dark:border-[#E99A3B]/30 p-0.5">
                           <button
                             type="button"
                             onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                            className="w-6 h-6 rounded bg-[#21130D] hover:bg-[#C96B26] text-[#F7F0E5] flex items-center justify-center transition-colors text-xs"
+                            className="w-6 h-6 rounded bg-[#FDF9F0] dark:bg-[#21130D] hover:bg-[#C96B26] hover:text-white text-[#2A170F] dark:text-[#F7F0E5] flex items-center justify-center transition-colors text-xs"
                             aria-label={`Reduce ${item.name}`}
                           >
                             <Minus className="w-3 h-3" />
                           </button>
-                          <span className="w-6 text-center text-xs font-bold text-[#E99A3B]">
+                          <span className="w-6 text-center text-xs font-bold text-[#9E4712] dark:text-[#E99A3B]">
                             {item.quantity}
                           </span>
                           <button
                             type="button"
                             onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                            className="w-6 h-6 rounded bg-[#21130D] hover:bg-[#E99A3B] hover:text-[#120C09] text-[#F7F0E5] flex items-center justify-center transition-colors text-xs"
+                            className="w-6 h-6 rounded bg-[#FDF9F0] dark:bg-[#21130D] hover:bg-[#C96B26] hover:text-white text-[#2A170F] dark:text-[#F7F0E5] flex items-center justify-center transition-colors text-xs"
                             aria-label={`Increase ${item.name}`}
                           >
                             <Plus className="w-3 h-3" />
@@ -217,7 +217,7 @@ export default function CartDrawer({
                         <button
                           type="button"
                           onClick={() => onRemoveItem(item.id)}
-                          className="p-1.5 text-[#F7F0E5]/40 hover:text-red-400 transition-colors"
+                          className="p-1.5 text-[#5C4337]/50 dark:text-[#F7F0E5]/40 hover:text-red-500 transition-colors"
                           title="Remove item"
                           aria-label={`Remove ${item.name}`}
                         >
@@ -233,22 +233,22 @@ export default function CartDrawer({
 
           {/* Footer & Checkout Area */}
           {cartItems.length > 0 && (
-            <div className="p-6 border-t border-[#21130D] bg-[#21130D]/40 space-y-4">
+            <div className="p-4 sm:p-6 border-t border-[#C96B26]/20 dark:border-[#21130D] bg-[#F9F3E5] dark:bg-[#21130D]/40 space-y-4">
               {/* Calculations */}
               <div className="space-y-2">
-                <div className="flex justify-between text-xs text-[#F7F0E5]/70">
+                <div className="flex justify-between text-xs text-[#5C4337] dark:text-[#F7F0E5]/70">
                   <span>Subtotal ({totalCount} items)</span>
                   <span>₹{subtotal}</span>
                 </div>
-                <div className="flex justify-between text-xs text-[#F7F0E5]/70">
+                <div className="flex justify-between text-xs text-[#5C4337] dark:text-[#F7F0E5]/70">
                   <span>Packaging & Parcel</span>
-                  <span className="text-emerald-400 font-medium">₹0 (Complimentary)</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-semibold">₹0 (Free)</span>
                 </div>
-                <div className="pt-2 border-t border-[#21130D] flex justify-between items-baseline">
-                  <span className="font-serif-display font-bold text-base text-[#F7F0E5]">
+                <div className="pt-2 border-t border-[#C96B26]/20 dark:border-[#21130D] flex justify-between items-baseline">
+                  <span className="font-serif-display font-bold text-base text-[#2A170F] dark:text-[#F7F0E5]">
                     Order Total:
                   </span>
-                  <span className="text-2xl font-extrabold text-[#E99A3B]">
+                  <span className="text-2xl font-extrabold text-[#9E4712] dark:text-[#E99A3B]">
                     ₹{subtotal}
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export default function CartDrawer({
                 <span>Order on WhatsApp (Demo)</span>
               </button>
 
-              <p className="text-[11px] text-center text-[#F7F0E5]/50">
+              <p className="text-[11px] text-center text-[#5C4337]/70 dark:text-[#F7F0E5]/50">
                 Creates a preformatted WhatsApp order message.
               </p>
             </div>

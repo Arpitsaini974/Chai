@@ -26,7 +26,7 @@ export default function Footer({ onOpenCart }) {
   };
 
   return (
-    <footer className="bg-[#0b0705] border-t border-[#E99A3B]/20 pt-16 pb-12 text-[#F7F0E5]">
+    <footer className="bg-[#F5ECE0] border-t border-[#C96B26]/20 pt-16 pb-12 text-[#2A170F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top 4-Column Grid */}
@@ -35,55 +35,49 @@ export default function Footer({ onOpenCart }) {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#C96B26] to-[#E99A3B] p-[2px]">
-                <div className="w-full h-full rounded-full bg-[#120C09] flex items-center justify-center">
-                  <Coffee className="w-5 h-5 text-[#E99A3B]" />
+              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#9E4712] to-[#E99A3B] p-[2px] shadow-sm">
+                <div className="w-full h-full rounded-full bg-[#FDF9F0] flex items-center justify-center">
+                  <Coffee className="w-5 h-5 text-[#9E4712]" />
                 </div>
               </div>
               <div>
-                <span className="font-brand-title text-base font-bold text-[#F7F0E5] block">
+                <span className="font-brand-title text-base font-black text-[#2A170F] block">
                   UPW AALI
                 </span>
-                <span className="text-xs text-[#E99A3B] font-serif-display uppercase">
+                <span className="text-xs text-[#9E4712] font-serif-display uppercase font-bold">
                   Amrittulya Chai
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-[#F7F0E5]/70 leading-relaxed">
-              उदयपुरवाटी की प्रसिद्ध केसर गुड़ अमृततुल्य चाय, कुल्हड़ चाय और शुद्ध दूध व देशी मसालों का बेमिसाल स्वाद।
+            <p className="text-xs text-[#5C4337] dark:text-[#D4AF37]/80 leading-relaxed font-normal">
+              Famous royal Kesar Gud Amrittulya Chai, authentic baked clay kulhads, pure milk, and hand-pounded spices from Udaipurwati.
             </p>
-
-            <div className="pt-1">
-              <span className="text-[11px] font-semibold text-[#E99A3B] bg-[#21130D] px-2.5 py-1 rounded-full border border-[#E99A3B]/20">
-                {BRAND_CONFIG.hindiTagline}
-              </span>
-            </div>
           </div>
 
           {/* Quick Navigation Links */}
           <div className="space-y-3">
-            <h4 className="font-serif-display font-bold text-sm text-[#F7F0E5] uppercase tracking-wider text-[#E99A3B]">
+            <h4 className="font-serif-display font-extrabold text-sm uppercase tracking-wider text-[#9E4712]">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xs text-[#F7F0E5]/80">
+            <ul className="space-y-2 text-xs text-[#5C4337] font-semibold">
               <li>
-                <a href="#menu" className="hover:text-[#E99A3B] transition-colors">
+                <a href="#menu" className="hover:text-[#9E4712] transition-colors">
                   Signature Menu & Prices
                 </a>
               </li>
               <li>
-                <a href="#story" className="hover:text-[#E99A3B] transition-colors">
+                <a href="#story" className="hover:text-[#9E4712] transition-colors">
                   Our Traditional Brewing
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#E99A3B] transition-colors">
+                <a href="#gallery" className="hover:text-[#9E4712] transition-colors">
                   Chai Counter Gallery
                 </a>
               </li>
               <li>
-                <a href="#location" className="hover:text-[#E99A3B] transition-colors">
+                <a href="#location" className="hover:text-[#9E4712] transition-colors">
                   Shop Address & Timings
                 </a>
               </li>
@@ -91,7 +85,7 @@ export default function Footer({ onOpenCart }) {
                 <button
                   type="button"
                   onClick={onOpenCart}
-                  className="hover:text-[#E99A3B] transition-colors text-left"
+                  className="hover:text-[#9E4712] transition-colors text-left"
                 >
                   View Order Drawer
                 </button>
@@ -101,13 +95,13 @@ export default function Footer({ onOpenCart }) {
 
           {/* Shop Timings & Support */}
           <div className="space-y-3">
-            <h4 className="font-serif-display font-bold text-sm text-[#F7F0E5] uppercase tracking-wider text-[#E99A3B]">
+            <h4 className="font-serif-display font-extrabold text-sm uppercase tracking-wider text-[#9E4712]">
               Visit Timings
             </h4>
-            <div className="space-y-1.5 text-xs text-[#F7F0E5]/70">
+            <div className="space-y-1.5 text-xs text-[#5C4337]">
               <p><strong>Daily:</strong> {BRAND_CONFIG.openingHours.weekdays}</p>
               <p><strong>Weekends:</strong> {BRAND_CONFIG.openingHours.weekends}</p>
-              <p className="text-[#E99A3B] text-[11px] pt-1">
+              <p className="text-[#9E4712] text-[11px] pt-1 font-bold">
                 Warm kulhad chai always ready on the burner.
               </p>
             </div>
@@ -115,7 +109,7 @@ export default function Footer({ onOpenCart }) {
 
           {/* Social & Contact Channels */}
           <div className="space-y-3">
-            <h4 className="font-serif-display font-bold text-sm text-[#F7F0E5] uppercase tracking-wider text-[#E99A3B]">
+            <h4 className="font-serif-display font-extrabold text-sm uppercase tracking-wider text-[#9E4712]">
               Connect With Us
             </h4>
             <div className="flex items-center gap-3">
@@ -123,7 +117,7 @@ export default function Footer({ onOpenCart }) {
                 href={BRAND_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21130D] hover:bg-[#E99A3B] text-[#E99A3B] hover:text-[#120C09] border border-[#E99A3B]/30 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#E99A3B]"
+                className="w-10 h-10 rounded-xl bg-[#FDF9F0] hover:bg-[#9E4712] text-[#9E4712] hover:text-white border border-[#C96B26]/30 flex items-center justify-center transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9E4712]"
                 aria-label="Instagram profile (demo link)"
               >
                 <InstagramIcon className="w-5 h-5" />
@@ -132,17 +126,17 @@ export default function Footer({ onOpenCart }) {
               <button
                 type="button"
                 onClick={onOpenCart}
-                className="w-10 h-10 rounded-xl bg-[#21130D] hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/30 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                className="w-10 h-10 rounded-xl bg-[#FDF9F0] hover:bg-emerald-600 text-emerald-600 hover:text-white border border-emerald-500/30 flex items-center justify-center transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 aria-label="WhatsApp order preview"
               >
                 <MessageCircle className="w-5 h-5" />
               </button>
             </div>
             
-            <p className="text-xs text-[#F7F0E5]/60 pt-1">
-              Instagram: <span className="text-[#E99A3B]">{BRAND_CONFIG.instagramHandle}</span>
+            <p className="text-xs text-[#5C4337] pt-1">
+              Instagram: <span className="text-[#9E4712] font-bold">{BRAND_CONFIG.instagramHandle}</span>
             </p>
-            <p className="text-[11px] text-[#F7F0E5]/50">
+            <p className="text-[11px] text-[#5C4337]/80">
               For franchise inquiries and feedback.
             </p>
           </div>
@@ -150,10 +144,10 @@ export default function Footer({ onOpenCart }) {
         </div>
 
         {/* Bottom Disclaimers & Copyright */}
-        <div className="pt-8 border-t border-[#21130D] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F7F0E5]/50">
+        <div className="pt-8 border-t border-[#C96B26]/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5C4337]">
           <div className="text-center sm:text-left space-y-1">
             <p>© {CURRENT_YEAR} {BRAND_CONFIG.brandName}. All rights reserved.</p>
-            <p className="text-[11px] text-[#E99A3B]/70">
+            <p className="text-[11px] text-[#9E4712] font-semibold">
               Client Presentation Demo — Menu items, sample pricing & placeholders for presentation purposes.
             </p>
           </div>
@@ -161,7 +155,7 @@ export default function Footer({ onOpenCart }) {
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#21130D] hover:bg-[#E99A3B]/20 text-[#E99A3B] border border-[#E99A3B]/30 transition-colors focus:outline-none focus:ring-2 focus:ring-[#E99A3B]"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#FDF9F0] hover:bg-[#F9F3E5] text-[#9E4712] border border-[#C96B26]/30 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9E4712]"
             aria-label="Scroll back to top"
           >
             <span>Back to Top</span>
